@@ -11,7 +11,7 @@ menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
 }));
 
 // Typing effect in the hero
-const roles = ['Full Stack Developer', 'Python Developer', 'Data Analyst', 'Networking & Cyber Security learner'];
+const roles = ['Full Stack Developer', 'Python Developer', 'Networking & Cyber Security learner'];
 const typed = document.getElementById('typed');
 const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 let r = 0, c = 0, deleting = false;
