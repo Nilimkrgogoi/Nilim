@@ -1,1336 +1,197 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+<meta name="description" content="Portfolio of Nilim Kumar Gogoi | Full Stack Developer | Python Developer | Data Analyst">
 <title>Nilim Kumar Gogoi | Portfolio</title>
-
-<meta name="description"
-content="Portfolio of Nilim Kumar Gogoi | Full Stack Developer | Python Developer | Data Analyst">
-
 <link rel="preconnect" href="https://fonts.googleapis.com">
-
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
-
-<link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-
-<link rel="stylesheet"
-href="https://unpkg.com/aos@2.3.4/dist/aos.css">
-
-<link rel="stylesheet"
-href="style.css">
-
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,700;1,9..144,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-<div id="loader">
-
-<div class="spinner"></div>
-
-</div>
-
-<div id="progressBar"></div>
-<button id="topBtn">
-    <i class="fas fa-arrow-up"></i>
-</button>
-
-<header>
-
-<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
-
-<div class="container">
-
-<a class="navbar-brand fw-bold" href="#">
-
-Nilim<span>.</span>
-
-</a>
-
-<button class="navbar-toggler"
-
-type="button"
-
-data-bs-toggle="collapse"
-
-data-bs-target="#navbar">
-
-<span class="navbar-toggler-icon"></span>
-
-</button>
-
-<div class="collapse navbar-collapse"
-
-id="navbar">
-
-<ul class="navbar-nav ms-auto">
-
-<li class="nav-item">
-
-<a class="nav-link" href="#home">
-
-Home
-
-</a>
-
-</li>
-
-<li class="nav-item">
-
-<a class="nav-link" href="#about">
-
-About
-
-</a>
-
-</li>
-
-<li class="nav-item">
-
-<a class="nav-link" href="#skills">
-
-Skills
-
-</a>
-
-</li>
-
-<li class="nav-item">
-
-<a class="nav-link" href="#projects">
-
-Projects
-
-</a>
-
-</li>
-
-<li class="nav-item">
-
-<a class="nav-link" href="#contact">
-
-Contact
-
-</a>
-
-</li>
-
-</ul>
-
-<div class="nav-buttons">
-
-<i class="fas fa-moon"
-
-id="themeBtn"></i>
-
-<a href="NilimkrgogoiResume.pdf"download class="btn btn-primary">Resume</a>
-
-</div>
-
-</div>
-
-</div>
-
-</nav>
-
+<header class="nav" id="top">
+  <a href="#home" class="logo">Nilim.</a>
+  <button class="menu-btn" aria-label="Toggle menu" aria-expanded="false">Menu</button>
+  <nav id="menu">
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#journey">Journey</a>
+    <a href="#contact">Contact</a>
+  </nav>
+  <a class="btn btn-sm" href="NilimkrgogoiResume.pdf" target="_blank" rel="noopener">Resume</a>
 </header>
 
-<section id="home"
-
-class="hero">
-
-<div class="container">
-
-<div class="row align-items-center">
-
-<div class="col-lg-6 hero-text"
-
-data-aos="fade-right">
-
-<p class="hello">
-
-👋 Hello, I'm
-
-</p>
-
-<h1>
-
-Nilim Kumar
-
-<span>Gogoi</span>
-
-</h1>
-
-<h2>
-
-<span id="typing"></span>
-
-<span class="cursor">|</span>
-
-</h2>
-
-<p>
-
-I'm a Computer Science Engineering student passionate about Full Stack Development, Python, Networking and Cyber Security enthusiast.
-
-</p>
-
-<div class="hero-buttons">
-
-<a href="#projects"
-
-class="btn btn-primary btn-lg">
-
-View Projects
-
-</a>
-
-<a href="#contact"
-
-class="btn btn-outline-light btn-lg">
-
-Hire Me
-
-</a>
-
-</div>
-
-<div class="social-icons">
-
-<a href="https://github.com/Nilimkrgogoi">
-
-<i class="fab fa-github"></i>
-
-</a>
-
-<a href="https://linkedin.com/in/nilimkrgogoi">
-
-<i class="fab fa-linkedin"></i>
-
-</a>
-
-<a href="mailto:nilimkumargogoi03@gmail.com">
-
-<i class="fas fa-envelope"></i>
-
-</a>
-
-<a href="https://instagram.com/nilimkrgogoi">
-
-<i class="fab fa-instagram"></i>
-
-</a>
-
-</div>
-
-</div>
-
-<div class="col-lg-6 text-center"data-aos="fade-left">
-<img src="profile.jpg"class="hero-img"alt="Nilim Kumar Gogoi">
-</div>
-
-</div>
-
-</div>
-
+<main>
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-text">
+    <p class="hello">Hello, I'm</p>
+    <h1>Nilim<br>Kumar Gogoi</h1>
+    <p class="role">I'm a <span id="typed"></span><span class="cursor">|</span></p>
+    <p class="lead">A Computer Science Engineering student passionate about Full Stack Development, Python, Networking and Cyber Security.</p>
+    <div class="actions">
+      <a class="btn" href="#projects">View projects</a>
+      <a class="btn btn-ghost" href="#contact">Hire me</a>
+    </div>
+    <div class="socials">
+      <a href="https://github.com/Nilimkrgogoi" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://linkedin.com/in/nilimkrgogoi" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://instagram.com/nilimkrgogoi" target="_blank" rel="noopener">Instagram</a>
+      <a href="mailto:nilimkumargogoi03@gmail.com">Email</a>
+    </div>
+  </div>
+  <div class="hero-photo">
+    <div class="arch"><img src="profile.jpg" alt="Nilim Kumar Gogoi" onerror="this.style.display='none'"></div>
+  </div>
 </section>
-<!-- ==========================================
-                ABOUT SECTION
-========================================== -->
 
-<section class="about" id="about">
-
-    <div class="container">
-    
-    <div class="row align-items-center gy-5">
-    
-    <div class="col-lg-12 text-center" data-aos="fade-up">
-    
-    <p class="section-title">
-    ABOUT ME
-    </p>
-    
-    <h2>
-    
-    Passionate
-    
-    <span>Developer</span>
-    
-    </h2>
-    
-    <p class="about-text">
-    
-    I'm <strong>Nilim Kumar Gogoi</strong>, a final-year Computer Science Engineering student from Assam.
-    
-    I enjoy building modern websites, Python automation tools, dashboards and data-driven applications.
-    
-    Currently I'm focusing on Full Stack Development, Python, AI & Machine Learning while preparing for my software engineering career.
-    
-    </p>
-    
-    <div class="info-grid">
-    
-    <div class="info-card">
-    
-    <i class="fas fa-user-graduate"></i>
-    
-    <h4>B.Tech CSE</h4>
-    
-    <p>Final Year Student</p>
-    
+<!-- ABOUT -->
+<section class="section" id="about">
+  <h2>Passionate developer</h2>
+  <div class="about-grid">
+    <div class="prose">
+      <p>I'm <strong>Nilim Kumar Gogoi</strong>, a final-year Computer Science Engineering student from Assam.</p>
+      <p>I enjoy building modern websites, Python automation tools, dashboards and data-driven applications.</p>
+      <p>Right now I'm focusing on Full Stack Development, Python, AI &amp; Machine Learning while preparing for my software engineering career.</p>
     </div>
-    
-    <div class="info-card">
-    
-    <i class="fas fa-code"></i>
-    
-    <h4>Projects</h4>
-    
-    <p>10+ Projects Built</p>
-    
-    </div>
-    
-    <div class="info-card">
-    
-    <i class="fas fa-briefcase"></i>
-    
-    <h4>Internships</h4>
-    
-    <p>Python, AI/ML, IoT & Web Development</p>
-    
-    </div>
-    
-    <div class="info-card">
-    
-    <i class="fas fa-location-dot"></i>
-    
-    <h4>Location</h4>
-    
-    <p>Guwahati, Assam, India</p>
-    
-    </div>
-    
-    </div>
-    
-    </div>
-    
-    </div>
-    
-    </div>
-    
-    </section>
-    
-    <!-- ==========================================
-                    STATS
-    ========================================== -->
-    
-    <section class="stats">
-    
-    <div class="container">
-    
-    <div class="stats-grid">
-    
-    <div class="stat-card" data-aos="zoom-in">
-    
-    <h2 id="projectCount">0</h2>
-    
-    <p>Projects Completed</p>
-    
-    </div>
-    
-    <div class="stat-card" data-aos="zoom-in" data-aos-delay="100">
-    
-    <h2 id="clientCount">0</h2>
-    
-    <p>Happy Clients</p>
-    
-    </div>
-    
-    <div class="stat-card" data-aos="zoom-in" data-aos-delay="200">
-    
-    <h2 id="skillCount">0</h2>
-    
-    <p>Technologies</p>
-    
-    </div>
-    
-    <div class="stat-card" data-aos="zoom-in" data-aos-delay="300">
-    
-    <h2 id="experienceCount">0</h2>
-    
-    <p>Years Learning</p>
-    
-    </div>
-    
-    </div>
-    
-    </div>
-    
-    </section>
-    
-    <!-- ==========================================
-                    SKILLS
-    ========================================== -->
-    
-    <section class="skills" id="skills">
-    
-    <div class="container">
-    
-    <p class="section-title text-center">
-    
-    MY SKILLS
-    
-    </p>
-    
-    <h2 class="text-center">
-    
-    Technologies I Use
-    
-    </h2>
-    
-    <div class="skills-grid">
-    
-    <div class="skill-card">
-    
-    <div class="skill-top">
-    
-    <h4>Python</h4>
-    
-    <span>95%</span>
-    
-    </div>
-    
-    <div class="progress">
-    
-    <div class="progress-bar python"></div>
-    
-    </div>
-    
-    </div>
-    
-    <div class="skill-card">
-    
-    <div class="skill-top">
-    
-    <h4>HTML</h4>
-    
-    <span>98%</span>
-    
-    </div>
-    
-    <div class="progress">
-    
-    <div class="progress-bar html"></div>
-    
-    </div>
-    
-    </div>
-    
-    <div class="skill-card">
-    
-    <div class="skill-top">
-    
-    <h4>CSS</h4>
-    
-    <span>95%</span>
-    
-    </div>
-    
-    <div class="progress">
-    
-    <div class="progress-bar css"></div>
-    
-    </div>
-    
-    </div>
-    
-    <div class="skill-card">
-        <div class="skill-top">
-            <h4>JavaScript</h4>
-            <span>88%</span>
-        </div>
-            <div class="progress">
-                <div class="progress-bar javascript"></div>
-            </div>
-    </div>
-    <div class="skill-card">
-        <div class="skill-top">
-            <h4>Bootstrap</h4>
-            <span>90%</span> 
-        </div>
-        <div class="progress">
-            <div class="progress-bar bootstrap"></div>
-        </div>
-    </div>
-            <div class="skill-card">
-        <div class="skill-top">
-            <h4>Excel</h4>
-            <span>95%</span> 
-        </div>
-        <div class="progress">
-            <div class="progress-bar bootstrap"></div>
-        </div>
-    </div>
-    <div class="skill-card">
-    
-    <div class="skill-top">
-    
-    <h4>PHP</h4>
-    
-    <span>85%</span>
-    
-    </div>
-    
-    <div class="progress">
-    
-    <div class="progress-bar php"></div>
-        
-    
-    </div>
-    
-    </div>
-    
-    <div class="skill-card">
-    
-    <div class="skill-top">
-    
-    <h4>MySQL</h4>
-    
-    <span>85%</span>
-    
-    </div>
-    
-    <div class="progress">
-    
-    <div class="progress-bar mysql"></div>
-    
-    </div>
-    
-    </div>
-    
-    <div class="skill-card">
-    
-    <div class="skill-top">
-    
-    <h4>Networking</h4>
-    
-    <span>85%</span>
-    
-    </div>
-    
-    <div class="progress">
-    
-    <div class="progress-bar data"></div>
-    
-    </div>
-    
-    </div>
-    
-    </div>
-    
-    </div>
-    
+    <dl class="facts">
+      <div><dt>Education</dt><dd>B.Tech CSE, final year</dd></div>
+      <div><dt>Projects</dt><dd>10+ projects built</dd></div>
+      <div><dt>Internships</dt><dd>Python, AI/ML, IoT and Web Development</dd></div>
+      <div><dt>Location</dt><dd>Guwahati, Assam, India</dd></div>
+    </dl>
+  </div>
+  <div class="stats">
+    <div><span class="count" data-to="10" data-suffix="+">0</span><small>Projects completed</small></div>
+    <div><span class="count" data-to="4">0</span><small>Internships</small></div>
+    <div><span class="count" data-to="8" data-suffix="+">0</span><small>Technologies</small></div>
+    <div><span class="count" data-to="2027" data-plain="1">0</span><small>B.Tech graduation</small></div>
+  </div>
 </section>
-<!-- ==========================================
-                SERVICES
-========================================== -->
 
-<section class="services" id="services">
+<!-- SKILLS -->
+<section class="section alt" id="skills">
+  <h2>Technologies I use</h2>
+  <div class="skills">
+    <div class="skill" data-level="95"><div class="skill-head"><span>Python</span><b>95%</b></div><div class="bar"><i></i></div></div>
+    <div class="skill" data-level="98"><div class="skill-head"><span>HTML</span><b>98%</b></div><div class="bar"><i></i></div></div>
+    <div class="skill" data-level="95"><div class="skill-head"><span>CSS</span><b>95%</b></div><div class="bar"><i></i></div></div>
+    <div class="skill" data-level="88"><div class="skill-head"><span>JavaScript</span><b>88%</b></div><div class="bar"><i></i></div></div>
+    <div class="skill" data-level="90"><div class="skill-head"><span>Bootstrap</span><b>90%</b></div><div class="bar"><i></i></div></div>
+    <div class="skill" data-level="95"><div class="skill-head"><span>Excel</span><b>95%</b></div><div class="bar"><i></i></div></div>
+    <div class="skill" data-level="85"><div class="skill-head"><span>PHP</span><b>85%</b></div><div class="bar"><i></i></div></div>
+    <div class="skill" data-level="85"><div class="skill-head"><span>MySQL</span><b>85%</b></div><div class="bar"><i></i></div></div>
+    <div class="skill" data-level="85"><div class="skill-head"><span>Networking</span><b>85%</b></div><div class="bar"><i></i></div></div>
+  </div>
 
-    <div class="container">
-    
-    <p class="section-title text-center">
-    MY SERVICES
-    </p>
-    
-    <h2 class="text-center">
-    What I Can Do
-    </h2>
-    
-    <p class="services-subtitle">
-    
-    I build modern websites, Python automation tools, dashboards and data-driven solutions that help businesses and individuals grow.
-    
-    </p>
-    
-    <div class="services-grid">
-    
-    <div class="service-card" data-aos="fade-up">
-    
-    <i class="fas fa-code"></i>
-    
-    <h3>Web Development</h3>
-    
-    <p>
-    
-    Responsive websites using HTML, CSS, JavaScript, Bootstrap, PHP and MySQL.
-    
-    </p>
-    
-    </div>
-    
-    <div class="service-card" data-aos="fade-up" data-aos-delay="100">
-    
-    <i class="fab fa-python"></i>
-    
-    <h3>Python Development</h3>
-    
-    <p>
-    
-    Automation scripts, desktop applications, APIs and data processing using Python.
-    
-    </p>
-    
-    </div>
-    
-    <div class="service-card" data-aos="fade-up" data-aos-delay="200">
-    
-    <i class="fas fa-chart-line"></i>
-    
-    <h3>Networking</h3>
-    
-    <p>
-    
-    
-    
-    </p>
-    
-    </div>
-    
-    </div>
-    
-    </div>
-    
+  <h3 class="sub">What I can do</h3>
+  <p class="intro">I build modern websites, Python automation tools, dashboards and data-driven solutions that help businesses and individuals grow.</p>
+  <div class="services">
+    <article><h4>Web development</h4><p>Responsive websites using HTML, CSS, JavaScript, Bootstrap, PHP and MySQL.</p></article>
+    <article><h4>Python development</h4><p>Automation scripts, desktop applications, APIs and data processing using Python.</p></article>
+    <article><h4>Networking</h4><p>Network fundamentals, cloud infrastructure basics and cyber security practice.</p></article>
+  </div>
 </section>
-    
-    <!-- ==========================================
-                    PROJECTS
-    ========================================== -->
-    
-<section class="projects" id="projects">
-    
-    <div class="container">
-    
-        <p class="section-title text-center">
-        PORTFOLIO
-        </p>
-    
-        <h2 class="text-center">
-        Featured Projects
-        </h2>
 
-        <p class="projects-subtitle">
-        
-        Here are some of the projects I've worked on during internships and personal learning.
-        
-        </p>
-    
-    <div class="projects-grid">
-    
-    <!-- Project 1 -->
-    
-    <div class="project-card" data-aos="zoom-in">
-    
-        <div class="project-image">
-    
-            <img src="project1.jpg" alt="Exam Cell Management System">
-    
-        </div>
-        <div class="project-content">
-            
-            <h3>Exam Cell Management System</h3>
-            
-            <p> A complete web-based system built using PHP, MySQL, Bootstrap and JavaScript to manage examination records efficiently.</p>
-            
-            <div class="tech-stack">
-                    <span>PHP</span>
-            
-                    <span>MySQL</span>
-
-                    <span>Bootstrap</span>
-
-                <span>JavaScript</span>
-            
-            </div>
-        
-            <div class="project-buttons">
-                <a href="#" class="btn btn-primary">Live Demo</a>
-                <a href="https://github.com/Nilimkrgogoi/Exam-cell-management-system-"target="_blank"class="btn btn-outline-custom">
-                    GitHub
-                </a>
-            
-            </div>
-        
-        </div>
-    
-    </div>
-    <!-- Project 2 -->
-    <div class="project-card" data-aos="zoom-in" data-aos-delay="200">
-
-        <div class="project-image">
-            <img src="project2.jpeg" alt="Portfolio Website">
-        
-        </div>
-        <div class="project-content">
-            <h3>Smart Home Security System</h3>
-            <p>IoT-based home security project developed using Arduino with motion detection and sensor monitoring.</p>
-            <div class="tech-stack">
-                <span>Arduino</span>
-                <span>C/C++</span>
-                <span>IoT</span>
-                <span>Sensors</span>
-
-            </div>
-
-            <div class="project-buttons">
-            
-                <a href="#" class="btn btn-primary">Live Demo</a>
-            
-                <a href="https://github.com/Nilimkrgogoi/Smart-Home-Security-System"target="_blank" class="btn btn-outline-custom">
-                GitHub</a>
-                
-            </div>
-
-        </div>
-
-    </div>
-
-    <!-- Project 3 -->
-    <div class="project-card" data-aos="zoom-in" data-aos-delay="200">
-        <div class="project-image">
-            <img src="portfolio.jpg" alt="Portfolio Website">
-        
-        </div>
-        <div class="project-content">
+<!-- PROJECTS -->
+<section class="section" id="projects">
+  <h2>Featured projects</h2>
+  <p class="intro">Projects from my internships and personal learning.</p>
+  <div class="projects">
+    <article class="project">
+      <img src="project1.jpg" alt="Exam Cell Management System" onerror="this.style.display='none'">
+      <div class="p-body">
+        <h3>Exam Cell Management System</h3>
+        <p>A complete web-based system built with PHP, MySQL, Bootstrap and JavaScript to manage examination records efficiently.</p>
+        <ul class="tags"><li>PHP</li><li>MySQL</li><li>Bootstrap</li><li>JavaScript</li></ul>
+        <a href="https://github.com/Nilimkrgogoi/Exam-cell-management-system-" target="_blank" rel="noopener">View on GitHub</a>
+      </div>
+    </article>
+    <article class="project">
+      <img src="project2.jpeg" alt="Smart Home Security System" onerror="this.style.display='none'">
+      <div class="p-body">
+        <h3>Smart Home Security System</h3>
+        <p>IoT-based home security project built on Arduino with motion detection and sensor monitoring.</p>
+        <ul class="tags"><li>Arduino</li><li>C/C++</li><li>IoT</li><li>Sensors</li></ul>
+        <a href="https://github.com/Nilimkrgogoi/Smart-Home-Security-System" target="_blank" rel="noopener">View on GitHub</a>
+      </div>
+    </article>
+    <article class="project">
+      <img src="portfolio.jpg" alt="Developer Portfolio" onerror="this.style.display='none'">
+      <div class="p-body">
         <h3>Developer Portfolio</h3>
-
-        <p>
-        
-        A modern responsive portfolio built using HTML, CSS, JavaScript and Bootstrap with animations and dark mode.
-        
-        </p>
-
-        <div class="tech-stack">
-        
-            <span>HTML</span>
-
-            <span>CSS</span>
-
-            <span>JavaScript</span>
-
-            <span>Bootstrap</span>
-        
-        </div>
-
-        <div class="project-buttons">
-        
-            <a href="https://nilimkrgogoi.github.io/Nilim_Portfolio/"
-
-            class="btn btn-primary">
-
-            Live Demo
-
-            </a>
-
-            <a href="https://github.com/Nilimkrgogoi"
-
-            target="_blank"
-
-            class="btn btn-outline-custom">
-
-            GitHub
-
-            </a>
-        
-        </div>
-        </div>
-    
-    </div>
-    <!-- Project 4 -->
-   <div class="project-card" data-aos="zoom-in" data-aos-delay="200">
-        <div class="project-image">
-            <img src="Project4.jpg" alt="Portfolio Website">
-        
-        </div>
-        <div class="project-content">
+        <p>A responsive portfolio built with HTML, CSS and JavaScript, with animated sections and a clean layout.</p>
+        <ul class="tags"><li>HTML</li><li>CSS</li><li>JavaScript</li></ul>
+        <a href="https://github.com/Nilimkrgogoi" target="_blank" rel="noopener">View on GitHub</a>
+      </div>
+    </article>
+    <article class="project">
+      <img src="Project4.jpg" alt="Smart Attendance System" onerror="this.style.display='none'">
+      <div class="p-body">
         <h3>Smart Attendance System</h3>
-        <p>
-        A Streamlit-based Smart Attendance Management System that uses QR Code scanning and Face Recognition to securely automate employee check-in/check-out with attendance reporting and admin management.
-        </p>
-
-        <div class="tech-stack">
-        
-            <span>Python</span>
-
-            <span>Streamlit</span>
-
-            <span>OpenCV</span>
-
-            <span>JavaScript</span>
-        
-        </div>
-
-        <div class="project-buttons">
-        
-            <a href="#"
-
-            class="btn btn-primary">
-
-            Live Demo
-
-            </a>
-
-            <a href="https://github.com/Nilimkrgogoi/smart_attendance_system"
-
-            target="_blank"
-
-            class="btn btn-outline-custom">
-
-            GitHub
-
-            </a>
-        
-        </div>
-
-    
-    </div>
-    
+        <p>A Streamlit app that uses QR code scanning and face recognition to automate employee check-in and check-out, with attendance reports and admin management.</p>
+        <ul class="tags"><li>Python</li><li>Streamlit</li><li>OpenCV</li><li>JavaScript</li></ul>
+        <a href="https://github.com/Nilimkrgogoi/smart_attendance_system" target="_blank" rel="noopener">View on GitHub</a>
+      </div>
+    </article>
+  </div>
 </section>
-    <!-- ==========================================
-                TIMELINE
-========================================== -->
 
-<section class="timeline" id="timeline">
+<!-- JOURNEY -->
+<section class="section alt" id="journey">
+  <h2>Education &amp; experience</h2>
+  <ol class="timeline">
+    <li><time>2021 – 2024</time><h3>Diploma in Computer Engineering</h3><p>Hands-on experience in programming, networking, Java and databases.</p></li>
+    <li><time>2023</time><h3>Python Internship, AMTRON</h3><p>Python fundamentals, automation scripts and practical programming exercises.</p></li>
+    <li><time>2023</time><h3>IoT Internship, NIELIT</h3><p>Built Arduino-based IoT projects including smart home automation and sensor integration.</p></li>
+    <li><time>2024</time><h3>Web Development Internship</h3><p>Developed responsive websites using HTML, CSS, Bootstrap, PHP and MySQL.</p></li>
+    <li><time>2024 – 2027</time><h3>B.Tech in Computer Science Engineering</h3><p>Specialising in Full Stack Development, AI and Data Science.</p></li>
+    <li><time>2025</time><h3>AI &amp; ML Internship</h3><p>Machine Learning, data analysis, Pandas, NumPy and Scikit-learn.</p></li>
+    <li><time>2026</time><h3>IT Intern, DITEC, Government of Assam</h3>
+      <p>Studied e-Governance platforms including eOffice, ePrastuti, RoW Portal, Aadhaar AUA/KUA, Government Email Services and ASDC. Gained exposure to cloud infrastructure, networking, cyber security and digital governance. Visited the Assam Legislative Assembly to learn how the National e-Vidhan Application (NeVA) is used. Prepared technical documentation and internship reports.</p></li>
+    <li><time>Present</time><h3>Learning networking and cyber security</h3><p>Studying the fundamentals and working on real-life projects.</p></li>
+  </ol>
 
-    <div class="container">
-    
-    <p class="section-title text-center">
-    MY JOURNEY
-    </p>
-    
-    <h2 class="text-center">
-    Education & Experience
-    </h2>
-    
-    <div class="timeline-wrapper">
-    
-    <!-- Diploma -->
-    
-    <div class="timeline-item" data-aos="fade-right">
-    
-    <div class="timeline-dot"></div>
-    
-    <div class="timeline-content">
-    
-    <h5>2021 - 2024</h5>
-    
-    <h3>Diploma in Computer Engineering</h3>
-    
-    <p>
-    
-    Completed Diploma in Computer Engineering with hands-on experience in programming, networking, Java and databases.
-    
-    </p>
-    
-    </div>
-    
-    </div>
-    
-    <!-- B.Tech -->
-    
-    <div class="timeline-item" data-aos="fade-left">
-    
-    <div class="timeline-dot"></div>
-    
-    <div class="timeline-content">
-    
-    <h5>2024 - 2027</h5>
-    
-    <h3>B.Tech in Computer Science Engineering</h3>
-    
-    <p>
-    
-    Currently pursuing B.Tech in Computer Science Engineering with specialization in Full Stack Development, AI and Data Science.
-    
-    </p>
-    
-    </div>
-    
-    </div>
-    
-    <!-- Python -->
-    
-    <div class="timeline-item" data-aos="fade-right">
-    
-    <div class="timeline-dot"></div>
-    
-    <div class="timeline-content">
-    
-    <h5>2023</h5>
-    
-    <h3>Python Internship - AMTRON</h3>
-    
-    <p>
-    
-    Worked on Python fundamentals, automation scripts and practical programming exercises.
-    
-    </p>
-    
-    </div>
-    
-    </div>
-    
-    <!-- IoT -->
-    
-    <div class="timeline-item" data-aos="fade-left">
-    
-    <div class="timeline-dot"></div>
-    
-    <div class="timeline-content">
-    
-    <h5>2023</h5>
-    
-    <h3>IoT Internship - NIELIT</h3>
-    
-    <p>
-    
-    Built Arduino based IoT projects including smart home automation and sensor integration.
-    
-    </p>
-    
-    </div>
-    
-    </div>
-    
-    <!-- Web -->
-    
-    <div class="timeline-item" data-aos="fade-right">
-    
-    <div class="timeline-dot"></div>
-    
-    <div class="timeline-content">
-    
-    <h5>2024</h5>
-    
-    <h3>Web Development Internship</h3>
-    
-    <p>
-    
-    Developed responsive websites using HTML, CSS, Bootstrap, PHP and MySQL.
-    
-    </p>
-    
-    </div>
-    
-    </div>
-    
-    <!-- AI -->
-    
-    <div class="timeline-item" data-aos="fade-left">
-    
-    <div class="timeline-dot"></div>
-    
-    <div class="timeline-content">
-    
-    <h5>2025</h5>
-    
-    <h3>AI & ML Internship</h3>
-    
-    <p>
-    
-    Worked on Machine Learning, Data Analysis, Pandas, NumPy and Scikit-learn.
-    
-    </p>
-    
-    </div>
-    
-    </div>
+  <h3 class="sub">Certifications</h3>
+  <div class="certs">
+    <div><b>Python Programming</b><span>AMTRON Internship Certificate</span></div>
+    <div><b>Web Development</b><span>Prism Infosys Internship</span></div>
+    <div><b>AI &amp; Machine Learning</b><span>Gauhati University Internship</span></div>
+    <div><b>Internet of Things</b><span>NIELIT Internship</span></div>
+    <div><b>IT Intern</b><span>DITEC, Government of Assam</span></div>
+  </div>
+</section>
 
-    <!--DITEC-->
-    <div class="timeline-item" data-aos="fade-rigth">
-    
-    <div class="timeline-dot"></div>
-    
-    <div class="timeline-content">
-    
-    <h5>2026</h5>
-    
-    <h3>DITEC, Government of Assam – IT Intern</h3>
-    
-    <p>
-    
-    Studied and analyzed e-Governance platforms including eOffice, ePrastuti, RoW Portal, Aadhaar AUA/KUA, Government Email Services, and ASDC.
-    Gained practical exposure to cloud infrastructure, networking, cybersecurity, and digital governance.
-    Visited the Assam Legislative Assembly to understand the implementation of digital legislative systems and the National e-Vidhan Application (NeVA).
-    Prepared technical documentation and internship reports based on government digital services.
-    </p>
-    
+<!-- CONTACT -->
+<section class="section contact" id="contact">
+  <div class="contact-wrap">
+    <div>
+      <h2>Let's work together</h2>
+      <p class="intro">I'm available for freelance projects, internships and full-time roles. Send me a message and I'll reply by email.</p>
+      <dl class="facts light">
+        <div><dt>Email</dt><dd><a href="mailto:nilimkumargogoi03@gmail.com">nilimkumargogoi03@gmail.com</a></dd></div>
+        <div><dt>Location</dt><dd>Guwahati, Assam, India</dd></div>
+        <div><dt>Find me on</dt><dd><a href="https://github.com/Nilimkrgogoi" target="_blank" rel="noopener">GitHub</a>, <a href="https://linkedin.com/in/nilimkrgogoi" target="_blank" rel="noopener">LinkedIn</a>, <a href="https://instagram.com/nilimkrgogoi" target="_blank" rel="noopener">Instagram</a></dd></div>
+      </dl>
     </div>
-    
-    </div>
-    
-    <!-- Present -->
-    
-    <div class="timeline-item" data-aos="fade-left">
-    
-    <div class="timeline-dot"></div>
-    
-    <div class="timeline-content">
-    
-    <h5>Present</h5>
-    
-    <h3>Learning Networking and Cyber Security </h3>
-    
-    <p>
-    learning fundamentals of networing and working on real life projects 
-    </p>
-    
-    </div>
-    
-    </div>
-    
-    </div>
-    
-    </div>
-    
-    </section>
-    
-    <!-- ==========================================
-                    CERTIFICATES
-    ========================================== -->
-    
-    <section class="certificates" id="certificates">
-    
-    <div class="container">
-    
-    <p class="section-title text-center">
-    CERTIFICATES
-    </p>
-    
-    <h2 class="text-center">
-    Achievements & Certifications
-    </h2>
-    
-    <div class="certificate-grid">
-    
-    <div class="certificate-card" data-aos="zoom-in">
-    
-    <i class="fab fa-python"></i>
-    
-    <h3>Python Programming</h3>
-    
-    <p>AMTRON Internship Certificate</p>
-    
-    </div>
-    
-    <div class="certificate-card" data-aos="zoom-in" data-aos-delay="100">
-    
-    <i class="fas fa-code"></i>
-    
-    <h3>Web Development</h3>
-    
-    <p>Prism Infosys Internship</p>
-    
-    </div>
-    
-    <div class="certificate-card" data-aos="zoom-in" data-aos-delay="200">
-    
-    <i class="fas fa-brain"></i>
-    
-    <h3>AI & Machine Learning</h3>
-    
-    <p>Gauhati University Internship</p>
-    
-    </div>
-    
-    <div class="certificate-card" data-aos="zoom-in" data-aos-delay="300">
-    
-    <i class="fas fa-microchip"></i>
-    
-    <h3>Internet of Things</h3>
-    
-    <p>NIELIT Internship</p>
-    
-    </div>
-        <div class="certificate-card" data-aos="zoom-in" data-aos-delay="300">
-    
-    <i class="fas fa-microchip"></i>
-    
-    <h3>IT intern </h3>
-    
-    <p> DITEC, Government of Assam </p>
-    
-    </div>
-    
-    </div>
-    
-    </div>
-    
-    </section>
-    
-    <!-- ==========================================
-                    ACHIEVEMENTS
-    ========================================== -->
-    
-    <section class="achievements" id="achievements">
-    
-    <div class="container">
-    
-    <p class="section-title text-center">
-    ACHIEVEMENTS
-    </p>
-    
-    <h2 class="text-center">
-    Highlights
-    </h2>
-    
-    <div class="achievement-grid">
-    
-    <div class="achievement-card" data-aos="flip-left">
-    
-    <h1>10+</h1>
-    
-    <p>Projects Completed</p>
-    
-    </div>
-    
-    <div class="achievement-card" data-aos="flip-left" data-aos-delay="100">
-    
-    <h1>4</h1>
-    
-    <p>Internships</p>
-    
-    </div>
-    
-    <div class="achievement-card" data-aos="flip-left" data-aos-delay="200">
-    
-    <h1>8+</h1>
-    
-    <p>Technologies</p>
-    
-    </div>
-    
-    <div class="achievement-card" data-aos="flip-left" data-aos-delay="300">
-    
-    <h1>2027</h1>
-    
-    <p>B.Tech Graduation</p>
-    
-    </div>
-    
-    </div>
-    
-    </div>
-    
-    </section>
-    
-<!-- ==========================================
-                CONTACT
-========================================== -->
-
-<section class="contact" id="contact">
-
-    <div class="container">
-    
-    <p class="section-title text-center">
-    CONTACT
-    </p>
-    
-    <h2 class="text-center">
-    Let's Work Together
-    </h2>
-    
-    <p class="contact-subtitle">
-    
-    I'm currently available for freelance projects, internships, and full-time opportunities. Feel free to get in touch.
-    
-    </p>
-    
-    <div class="contact-wrapper">
-    
-    <!-- Contact Information -->
-    
-    <div class="contact-info">
-    
-    <div class="contact-card" data-aos="fade-right">
-    
-    <i class="fas fa-envelope"></i>
-    
-    <h4>Email</h4>
-    
-    <p>
-    
-    <a href="mailto:nilimkumargogoi03@gmail.com">
-    nilimkumargogoi03@gmail.com
-    </a>
-    
-    </p>
-    
-    </div>
-    
-    <div class="contact-card" data-aos="fade-right" data-aos-delay="100">
-    
-    <i class="fas fa-phone"></i>
-    
-    <h4>Phone</h4>
-    
-    <p>+91 XXXXXXXXXX</p>
-    
-    </div>
-    
-    <div class="contact-card" data-aos="fade-right" data-aos-delay="200">
-    
-    <i class="fas fa-location-dot"></i>
-    
-    <h4>Location</h4>
-    
-    <p>Guwahati, Assam, India</p>
-    
-    </div>
-    
-    <div class="contact-card" data-aos="fade-right" data-aos-delay="300">
-    
-    <i class="fas fa-globe"></i>
-    
-    <h4>Follow Me</h4>
-    
-    <div class="social-icons">
-    
-    <a href="https://github.com/Nilimkrgogoi"
-    target="_blank"
-    rel="noopener">
-    
-    <i class="fab fa-github"></i>
-    
-    </a>
-    
-    <a href="https://linkedin.com/in/nilimkrgogoi"
-    target="_blank"
-    rel="noopener">
-    
-    <i class="fab fa-linkedin"></i>
-    
-    </a>
-    
-    <a href="https://instagram.com/nilimkrgogoi"
-    target="_blank"
-    rel="noopener">
-    
-    <i class="fab fa-instagram"></i>
-    
-    </a>
-    
-    <a href="mailto:nilimkumargogoi03@gmail.com">
-    
-    <i class="fas fa-envelope"></i>
-    
-    </a>
-    
-    </div>
-    
-    </div>
-    
-    </div>
-    
-    <!-- Contact Form -->
-    
-    <div class="contact-form" data-aos="fade-left">
-    
-    <form id="contactForm">
-    
-    <input
-    type="text"
-    placeholder="Your Name"
-    required>
-    
-    <input
-    type="email"
-    placeholder="Your Email"
-    required>
-    
-    <input
-    type="text"
-    placeholder="Subject">
-    
-    <textarea
-    rows="6"
-    placeholder="Write your message..."
-    required></textarea>
-    
-    <button
-    type="submit"
-    class="btn btn-primary w-100">
-    
-    Send Message
-    
-    </button>
-    
+    <form id="contact-form">
+      <label>Your name<input type="text" id="name" required></label>
+      <label>Your email<input type="email" id="email" required></label>
+      <label>Message<textarea id="message" rows="5" required></textarea></label>
+      <button class="btn btn-light" type="submit">Send message</button>
+      <p class="form-note" id="form-note" role="status"></p>
     </form>
-    
-    </div>
-    
-    </div>
-    
-    </div>
-    
-    </section>
-    
-    <!-- ==========================================
-                    FOOTER
-    ========================================== -->
-    
-    <footer>
-    
-    <div class="container">
-    
-    <p>
-    
-    © <span id="year"></span>
-    
-    <strong>Nilim Kumar Gogoi</strong>
-    
-    All Rights Reserved.
-    
-    </p>
-    
-    </div>
-    
-    </footer>
-    
-    <!-- Back To Top -->
-    
-    <!-- Bootstrap JS -->
-    
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
-    
-    <!-- AOS -->
-    
-    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-    
-    <script>
-    
-    AOS.init({
-    
-    duration:1000,
-    
-    once:true
-    
-    });
-    
-    </script>
-    
-    <!-- Main Script -->
-    
-    <script src="script.js"></script>
-    
-    </body>
-    
-    </html>
+  </div>
+</section>
+</main>
+
+<footer>© <span id="year"></span> <b>Nilim Kumar Gogoi</b>. All rights reserved.</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
